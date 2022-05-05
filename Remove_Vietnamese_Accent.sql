@@ -8,8 +8,8 @@ BEGIN
 -- Example: 'Ứng Tuyển Nhân Sự' --> 'Ung Tuyen Nhan Su'
 -- By: Bùi Khởi Long
 
-IF @string IS NULL RETURN @string
-IF @string = '' RETURN @string
+--Check null or empty
+IF @string IS NULL OR @string = '' RETURN @string
 
 --Convert Normal Character
 SET @string  = TRANSLATE(@string,N'à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ','a|a|a|a|a|a|a|a|a|a|a|a|a|a|a|a|a')
